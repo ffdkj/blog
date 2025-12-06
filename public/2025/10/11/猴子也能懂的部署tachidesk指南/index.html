@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>猴子也能会的tachidesk部署指南 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="mihon&#x2F;tachiyomi怎么没有ios版啊…………老是被cloudflare墙掉很难受啊…………多个设备的阅读记录不同步好烦啊…………能不能像访问网站一样方便地看漫画啊？有的兄弟，有的，tachidesk就是干这个的       1. 安装 Docker并部署 Tachidesk下载Docker  不知道下 ARM 还是 AMD版本点这里 详细教程及报错解决参考Docker部署配">
+<meta property="og:type" content="article">
+<meta property="og:title" content="猴子也能会的tachidesk部署指南">
+<meta property="og:url" content="http://example.com/2025/10/11/%E7%8C%B4%E5%AD%90%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84%E9%83%A8%E7%BD%B2tachidesk%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="mihon&#x2F;tachiyomi怎么没有ios版啊…………老是被cloudflare墙掉很难受啊…………多个设备的阅读记录不同步好烦啊…………能不能像访问网站一样方便地看漫画啊？有的兄弟，有的，tachidesk就是干这个的       1. 安装 Docker并部署 Tachidesk下载Docker  不知道下 ARM 还是 AMD版本点这里 详细教程及报错解决参考Docker部署配">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/jPeIuJf29FwSGQz.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/q1ZwGDOdFajWuix.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/FXqNxHY1LCGDSac.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/zUGvdDQ5alsuk2S.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/DT8rb1XQp2hLaHM.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/Am42N1Vok7HJdDv.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/b7X6WIQocY9Pai3.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/PlI5zeOu26h1CZL.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/C15id69AOgTvIG2.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/TLU78mVXxPpFMN1.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/uZFSLOs7JA8rUhB.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/2WfgzjdEpMY9A8k.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/xw6S4qPuv251Bsa.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/xw6S4qPuv251Bsa.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/gxLKYaAo8lm6Pck.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/JWMso87Lwa6DFYT.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/v1iqgJbAEt4jkcB.png">
+<meta property="og:image" content="https://s2.loli.net/2025/10/09/kHzJdrf5SGPxjDg.png">
+<meta property="article:published_time" content="2025-10-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-31T03:18:53.730Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Hugo">
+<meta property="article:tag" content="Tailscale">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2025/10/09/jPeIuJf29FwSGQz.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-猴子也能懂的部署tachidesk指南" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/11/%E7%8C%B4%E5%AD%90%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84%E9%83%A8%E7%BD%B2tachidesk%E6%8C%87%E5%8D%97/" class="article-date">
+  <time class="dt-published" datetime="2025-10-10T16:00:00.000Z" itemprop="datePublished">2025-10-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      猴子也能会的tachidesk部署指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>mihon&#x2F;tachiyomi怎么没有ios版啊…………<br>老是被cloudflare墙掉很难受啊…………<br>多个设备的阅读记录不同步好烦啊…………<br>能不能像访问网站一样方便地看漫画啊？<br><strong>有的兄弟，有的，tachidesk就是干这个的</strong>    </p>
+</blockquote>
+<hr>
+<h3 id="1-安装-Docker并部署-Tachidesk"><a href="#1-安装-Docker并部署-Tachidesk" class="headerlink" title="1. 安装 Docker并部署 Tachidesk"></a>1. 安装 <a href="https://www.cnblogs.com/phpnan/p/19092854" target="_blank" style="color: blue;">Docker</a>并部署 <a href="https://newzone.top/services/dockers-on-nas/tachidesk.html#配置指南" target="_blank" style="color: blue;">Tachidesk</a></h3><p><a href="https://www.docker.com/products/docker-desktop/" target="_blank" style="color: blue;">下载Docker</a></p>
+<blockquote>
+<p><em><a href="https://www.cnblogs.com/geekbruce/articles/18554682" target="_blank" style="color: blue;">不知道下 ARM 还是 AMD版本点这里</a></em></p>
+<p><em>详细教程及报错解决参考<a href="https://www.cnblogs.com/yxysuanfa/p/19124346" target="_blank" style="color: blue;">Docker部署配置全流程（超详细——Windows和Linux） - 指南 - yxysuanfa - 博客园</a></em></p>
+</blockquote>
+<blockquote>
+<p><em><a href="https://blog.csdn.net/m0_51290571/article/details/144635357" target="_blank" style="color: blue;">Windows装Docker至其他盘</a></em></p>
+</blockquote>
+<p>打开Terminal终端<img src="https://s2.loli.net/2025/10/09/jPeIuJf29FwSGQz.png" alt="	"></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run <span class="literal">-d</span> `</span><br><span class="line">  <span class="literal">--name</span> tachidesk `</span><br><span class="line">  <span class="literal">-p</span> <span class="number">4567</span>:<span class="number">4567</span> `</span><br><span class="line">  ghcr.io/suwayomi/tachidesk</span><br></pre></td></tr></table></figure>
+
+<p>复制粘贴运行</p>
+<p>（如果下载卡顿，可以用<a href="https://steampp.net/" target="_blank" style="color: blue;">Steam++</a>加速dockerhub，或<a href="https://zhuanlan.zhihu.com/p/1953242201254495256" target="_blank" style="color: blue;">配置国内镜像源</a>）</p>
+<p><img src="https://s2.loli.net/2025/10/09/q1ZwGDOdFajWuix.png"></p>
+<h3 id="2-配置Tachidesk"><a href="#2-配置Tachidesk" class="headerlink" title="2.配置Tachidesk"></a>2.配置Tachidesk</h3><p>docker运行tachidesk容器后浏览器打开<a href="http://localhost:4567便会出现tachidesk的界面">http://localhost:4567便会出现tachidesk的界面</a></p>
+<p><img src="https://s2.loli.net/2025/10/09/FXqNxHY1LCGDSac.png" alt="image-20250821163929987"></p>
+<p>语言在此更改</p>
+<p>添加扩展库</p>
+<p><img src="https://s2.loli.net/2025/10/09/zUGvdDQ5alsuk2S.png" alt="image-20250821163956487"></p>
+<p>设置——浏览——扩展库——添加源</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/main/index.min.json</span><br></pre></td></tr></table></figure>
+
+<p>依次复制粘贴代码以添加图源仓库</p>
+<p><img src="https://s2.loli.net/2025/10/09/DT8rb1XQp2hLaHM.png" alt="image-20250821164317580"></p>
+<p>再安装自己需要的图源即可（部分网站需要代理， 跳转到第5部分）</p>
+<p>如果只需要在电脑上运行，到此即可使用，以下是局域网内访问与远程访问的内容</p>
+<h3 id="3-电脑开放防火墙4567端口"><a href="#3-电脑开放防火墙4567端口" class="headerlink" title="3.电脑开放防火墙4567端口"></a>3.电脑开放防火墙4567端口</h3><p><img src="https://s2.loli.net/2025/10/09/Am42N1Vok7HJdDv.png" alt="image-20250821140436228"><img src="https://s2.loli.net/2025/10/09/b7X6WIQocY9Pai3.png" alt="image-20250821140438926"><img src="https://s2.loli.net/2025/10/09/PlI5zeOu26h1CZL.png" alt="image-20250821140442555"><img src="https://s2.loli.net/2025/10/09/C15id69AOgTvIG2.png" alt="image-20250821140444441"><img src="https://s2.loli.net/2025/10/09/TLU78mVXxPpFMN1.png" alt="image-20250821140445893"></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig | <span class="built_in">Select-String</span> <span class="string">&quot;IPv4&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>在powershell运行命令查询本机IP地址如192.168.1.100</p>
+<p>或访问该网站<a href="https://ip.900cha.com/" target="_blank" style="color: blue;">IP地址查询</a></p>
+<p>至此与电脑主机处于同一局域网的手机，平板等终端可以访问<a target="_blank" rel="noopener" href="http://192.168.1.100:4567/">http://192.168.1.100:4567</a></p>
+<p>如果需要远程访问，可以使用tailscale组网</p>
+<blockquote>
+<p>由于大部分情况下我们没有固定的ip，所以即使只需求局域网使用仍然推荐使用Tailscale等虚拟组网软件，如<a href="https://www.radmin-lan.cn/" target="_blank" style="color: blue;">Radmin LAN</a>等</p>
+</blockquote>
+<blockquote>
+<p>校园网可能也需要使用Tailscale，因为有些校园网会阻止设备局域网联机</p>
+</blockquote>
+<h3 id="4-使用tailscale组网实现远程访问"><a href="#4-使用tailscale组网实现远程访问" class="headerlink" title="4.使用tailscale组网实现远程访问"></a>4.使用tailscale组网实现远程访问</h3><p><img src="https://s2.loli.net/2025/10/09/uZFSLOs7JA8rUhB.png" alt="image-20250821173314462"></p>
+<p>在所需要连接访问的设备下载<a href="https://tailscale.com/download" target="_blank" style="color: blue;">安装tailscale</a>（苹果设备需要美版apple ID）</p>
+<p>并注册登录统一账号</p>
+<p>一经注册tailscale会分配一个虚拟IP（永久）,右键托盘中的tailscale图标可以看到</p>
+<p><img src="https://s2.loli.net/2025/10/09/2WfgzjdEpMY9A8k.png" alt="image-20250821174632187"></p>
+<p>或者运行命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tailscale ip</span><br></pre></td></tr></table></figure>
+
+<p>此时无论你身处何地，浏览器打开<a target="_blank" rel="noopener" href="http://100.xx.xxx.xxx:4567/%EF%BC%88X%E5%A4%84%E5%A1%AB%E5%85%A5%E5%88%86%E9%85%8D%E7%9A%84IP%EF%BC%89%E5%8D%B3%E5%8F%AF%E8%AE%BF%E9%97%AE%E9%83%A8%E7%BD%B2%E7%9A%84tachidesk">http://100.XX.XXX.XXX:4567/（X处填入分配的IP）即可访问部署的tachidesk</a></p>
+<blockquote>
+<p>tailscale传文件也是把好手</p>
+</blockquote>
+<hr>
+<h3 id="5-使用Clash代理转发tachidesk浏览"><a href="#5-使用Clash代理转发tachidesk浏览" class="headerlink" title="5.使用Clash代理转发tachidesk浏览"></a>5.使用<a href="https://www.wangwangit.com/Windows上的代理客户端Clash/index.html" target="_blank" style="color: blue;">Clash</a>代理转发tachidesk浏览</h3><p><strong>（我无法提供任何节点，也不教怎么科学上网，只是教有条件的人配置代理）</strong></p>
+<p>漫蛙，漫画柜等网站需要科学上网的，配置tachidesk即可</p>
+<p><img src="https://s2.loli.net/2025/10/09/xw6S4qPuv251Bsa.png" alt="image-20250821193752728"></p>
+<p><img src="https://s2.loli.net/2025/10/09/xw6S4qPuv251Bsa.png" alt="image-20250821193802384"></p>
+<p>host.docker.internal 是docker容器访问宿主机的ip，7891是clash用与socks代理的端口</p>
+<p><img src="https://s2.loli.net/2025/10/09/gxLKYaAo8lm6Pck.png" alt="image-20250821194031606"></p>
+<p>clash也需将Allow LAN打开，设置端口7891</p>
+<p>以下是流量转发的路径</p>
+<p><img src="https://s2.loli.net/2025/10/09/JWMso87Lwa6DFYT.png" alt="image-20250821192834285"></p>
+<blockquote>
+<p>推荐使用<a href="https://clash-party.com/" target="_blank" style="color: blue;">Clash Party</a>，对小白更友好</p>
+</blockquote>
+<blockquote>
+<p>漫蛙</p>
+</blockquote>
+<h3 id="6-使用FlareSolverr绕过cloudflare"><a href="#6-使用FlareSolverr绕过cloudflare" class="headerlink" title="6.使用FlareSolverr绕过cloudflare"></a>6.使用<a href="https://github.com/FlareSolverr/FlareSolverr" target="_blank" style="color: blue;">FlareSolverr</a>绕过<a href="https://blog.csdn.net/qq_21050249/article/details/131571780" target="_blank" style="color: blue;">cloudflare</a></h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run <span class="literal">-d</span> `</span><br><span class="line">  <span class="literal">--name</span>=flaresolverr `</span><br><span class="line">  <span class="literal">-p</span> <span class="number">8191</span>:<span class="number">8191</span> `</span><br><span class="line">  <span class="literal">-e</span> LOG_LEVEL=info `</span><br><span class="line">  <span class="literal">--restart</span> unless<span class="literal">-stopped</span> `</span><br><span class="line">  ghcr.io/flaresolverr/flaresolverr:latest</span><br></pre></td></tr></table></figure>
+
+<p>powershell或cmd运行以上代码拉取flaresolverr库并运行容器</p>
+<p><img src="https://s2.loli.net/2025/10/09/v1iqgJbAEt4jkcB.png" alt="image-20250907044116773"></p>
+<p>FlareSolverr服务器地址填入<a href="http://X.X.X.X:8191（X处填入tailscale分配的ip地址）">http://X.X.X.X:8191（X处填入tailscale分配的ip地址）</a></p>
+<p><img src="https://s2.loli.net/2025/10/09/kHzJdrf5SGPxjDg.png" alt="image-20250907044410980"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/11/%E7%8C%B4%E5%AD%90%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84%E9%83%A8%E7%BD%B2tachidesk%E6%8C%87%E5%8D%97/" data-id="cmiu74fpg000028mkgput8bo1" data-title="猴子也能会的tachidesk部署指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hugo/" rel="tag">Hugo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tailscale/" rel="tag">Tailscale</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hugo/" rel="tag">Hugo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tailscale/" rel="tag">Tailscale</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hugo/" style="font-size: 10px;">Hugo</a> <a href="/tags/Tailscale/" style="font-size: 10px;">Tailscale</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">October 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/10/11/%E7%8C%B4%E5%AD%90%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84%E9%83%A8%E7%BD%B2tachidesk%E6%8C%87%E5%8D%97/">猴子也能会的tachidesk部署指南</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

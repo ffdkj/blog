@@ -1,5 +1,5 @@
 ---
-title: "Webooru慎用教程"
+title: "Webooru食用教程"
 date: 2025-12-7
 draft: false
 tags: ["教程", "Docker","Tailscale"]
@@ -43,6 +43,8 @@ docker run -d --name webooru -p 100.65.203.30:8000:8000 20off/webooru:latest
 ```
 
 ***
+
+> 如果你根本不知道docker啊，tailscale是什么东西，请移步隔壁[猴子也能会的tachidesk部署指南 | Hexo](https://blog-ffzz-git-master-20offs-projects.vercel.app/2025/10/11/猴子也能懂的部署tachidesk指南/)
 
 ***
 

@@ -39,12 +39,18 @@ WeBooru 是一个轻量级、高性能的 **Web 服务端程序**，基于 FastA
 Bash/cmd
 
 ```cmd
-docker run -d --name webooru -p 100.65.203.30:8000:8000 20off/webooru:latest
+docker run -d --name webooru -p 8000:8000 20off/webooru:latest
 ```
+
+拉取后会自动运行容器，此时浏览器访问http://localhost:8000即可使用
+
+如果只需求电脑访问，那便到此为止即可
+
+如果需要局域网访问，或内网穿透远程使用请参考[猴子也能会的tachidesk部署指南 | Hexo](https://blog-ffzz.vercel.app/2025/10/11/猴子也能懂的部署tachidesk指南/)的2，3章内容
 
 ***
 
-> 如果你根本不知道docker啊，tailscale是什么东西，请移步隔壁[猴子也能会的tachidesk部署指南 | Hexo](https://blog-ffzz.vercel.app/2025/10/11/猴子也能懂的部署tachidesk指南/)
+> 如果不知道docker啊，tailscale，端口代理是什么东西，请移步隔壁[猴子也能会的tachidesk部署指南 | Hexo](https://blog-ffzz.vercel.app/2025/10/11/猴子也能懂的部署tachidesk指南/)
 
 ***
 

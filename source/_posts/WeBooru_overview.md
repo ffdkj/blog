@@ -4,11 +4,7 @@ date: 2025-12-7
 draft: false
 tags: ["教程", "Docker","Tailscale"]
 categories: ["技术"]
-cover:
-    image: "https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png"
-    alt: "网络错误"
-    caption: "pid:130947439"
-
+description: "再也不用天天上推去收集画师零零散散的图了"
 ---
 
 

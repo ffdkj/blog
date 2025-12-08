@@ -4,7 +4,7 @@ date: 2025-12-8
 draft: false
 tags: ["学习", "git"]
 categories: ["技术"]
-cover: https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png
+description: "👍git太方便了"
 ---
 
 # git使用

@@ -4,10 +4,14 @@ date: 2025-10-11
 draft: false
 tags: ["教程", "Hugo","Tailscale"]
 categories: ["技术"]
+index_img: https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png
+description: "mihon/tachiyomi怎么没有ios版啊…………  <br>
+老是被cloudflare墙掉很难受啊…………  <br>
+多个设备的阅读记录不同步好烦啊…………  <br>
+能不能像访问网站一样方便地看漫画啊？  <br>
+有的兄弟，有的，tachidesk就是干这个的<br>"    
 cover: https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png
 ---
-
-
 
 > mihon/tachiyomi怎么没有ios版啊…………  
 > 老是被cloudflare墙掉很难受啊…………  

@@ -4,10 +4,7 @@ date: 2025-10-16
 draft: false
 tags: ["教程", "Tailscale","Ech0","博客"]
 categories: ["技术"]
-cover:
-    image: "https://s2.loli.net/2025/10/16/17AL6bomh4tCj9w.jpg"
-    alt: "网络错误"
-    caption: "source：www.artstation.com/artwork/b5bxvE"
+description: "这里可以自由自在地发癫"
 ---
 
 # 用<a href="https://tailscale.com/download" target="_blank" style="color: blue;">Tailscale</a>和<a href="https://github.com/lin-snow/Ech0" target="_blank" style="color: blue;">Ech0</a>搭建自己的私人博客

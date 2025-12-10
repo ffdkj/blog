@@ -1,5 +1,5 @@
 ---
-title: "Hexo&Vercel&github部署免费博客"
+title: "Hexo+Vercel+github部署免费博客"
 date: 2025-12-9
 draft: false
 tags: ["教程", "Hexo", "blog"]
@@ -85,3 +85,5 @@ npm install
    ```
 
 > Vercel 会自动检测到 GitHub 仓库的变动，并重新构建和部署博客。
+
+> 文件名中最好不要包含+，#，&，?等的非法字符，会引发404错误                                                                                               发发

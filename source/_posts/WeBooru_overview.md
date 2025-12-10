@@ -30,6 +30,14 @@ WeBooru 是一个轻量级、高性能的 **Web 服务端程序**，基于 FastA
 
 ### 📥 安装与部署
 
+### 下载使用
+
+https://wwaws.lanzn.com/iTGo93d32pvi
+密码:dyog
+点击执行exe即可，运行后访问http://127.0.0.1:8000/即可
+
+> 监听0.0.0.0使用内网穿透或局域网访问服务访问{ip}:8000即可
+
 #### Docker 部署
 
 Bash/cmd

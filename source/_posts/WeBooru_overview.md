@@ -37,6 +37,15 @@ https://wwaws.lanzn.com/iTGo93d32pvi
 点击执行exe即可，运行后访问http://127.0.0.1:8000/即可
 
 > 监听0.0.0.0使用内网穿透或局域网访问服务访问{ip}:8000即可
+>
+> ```
+> docker run -d --name webooru \
+> -p 8000:8000 \
+> -v {你的设置路径}config.json:/app/Webooru/config.json \
+> 20off/webooru:latest
+> ```
+>
+> config.json中保存这您的apikey与书签等等数据，迁移该文件即可备份或迁移记录
 
 #### Docker 部署
 

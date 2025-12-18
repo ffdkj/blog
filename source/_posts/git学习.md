@@ -31,6 +31,20 @@ git add readme.txt
 git commit -m
 ```
 
+***
+
+### 远程关联
+
+```
+git remote add <别名> <地址>:
+```
+
+将远程仓库的具体url与起的别名关联
+
+>可以关联多个远程仓库
+
+***
+
 ### 推送提交
 
 与远程github仓库关联
@@ -39,11 +53,17 @@ git commit -m
 git remote add origin git@github.com:sdjf/git.git
 ```
 
+> git remote -v  命令会列出目前关联的所有远程仓库
+
 将本地提交内容推送到远程仓库（master分支）里
 
 ```
 git push -u origin master
 ```
+
+> -u 参数全面--set-upstream，设置一次后下次直接git push就会默认提交相关地址
+
+***
 
 ### 回退版本
 
@@ -68,3 +88,28 @@ git reset --hard HEAD^
 git push --force-with-lease origin master
 ```
 
+***
+
+### git分支
+
+在开始工作前，你首先需要知道自己在哪个分支，以及有哪些分支可用。
+
+- **`git branch`**：列出本地所有分支。当前所在的分支前会有一个 `*` 号。
+
+- **`git branch -a`**：列出本地和远程仓库的所有分支。
+
+- **`git branch <分支名>`**：创建一个新分支，但**不会**自动切换过去。
+
+- **`git checkout -b <分支名>`**：【最常用】创建并立即切换到新分支。
+
+  > *注：在较新版本的 Git 中，推荐使用 `git switch -c <分支名>` 代替。*
+
+ 分支切换与重命名
+
+- **`git checkout <分支名>`**：切换到已有的分支。
+
+  > *注：新版 Git 推荐使用 `git switch <分支名>`。*
+
+- **`git checkout -`**：快速切换回上一个分支（类似电视遥控器的“回看”键）。
+
+- **`git branch -m <旧名称> <新名称>`**：重命名分支。

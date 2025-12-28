@@ -43,6 +43,62 @@ git remote add <别名> <地址>:
 
 >可以关联多个远程仓库
 
+### [使用 git pull 拉取代码](https://blog.csdn.net/m0_45234510/article/details/120181503)
+
+*git pull* 命令用于从远程仓库获取最新的提交记录并将其合并到本地分支。它实际上是 *git fetch* 和 *git merge* 的简写，先从远程仓库获取最新的提交记录，然后将这些提交记录合并到当前分支中。
+
+基本用法
+
+git pull [远程仓库名] [分支名]
+
+示例
+
+- **拉取远程仓库的代码并合并到当前分支**：
+
+git pull origin master
+
+- **更新远程仓库的代码为最新的**：
+
+git fetch --all
+
+git reset --hard origin/master
+
+git pull origin master
+
+git merge master
+
+### 处理冲突
+
+在拉取代码时，如果遇到冲突，需要先解决冲突再继续拉取，或者先保存本地代码再提交。
+
+关联已有仓库并提交代码
+
+- **克隆或拉取代码**：
+
+git clone http://xxx.git
+
+git pull http://xxx.git
+
+- **创建和切换分支**：
+
+git branch -a
+
+git fetch
+
+git checkout -b <远程分支名>
+
+git pull origin <远程分支名>
+
+- **上传并提交代码**：
+
+git add xxx/
+
+git commit -m "init-1.0"
+
+git push origin feature
+
+通过这些步骤，你可以轻松地使用 *git pull* 命令从远程仓库拉取代码并合并到本地分支，确保你的代码库始终保持最新。
+
 ***
 
 ### 推送提交

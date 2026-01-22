@@ -148,6 +148,8 @@ tailscale ip
 
 host.docker.internal 是docker容器访问宿主机的ip，7891是clash用与socks代理的端口
 
+>Linux系统部署的请使用docker0虚拟网桥的地址（ 通常默认是**`172.17.0.1`**）
+
 ![image-20250821194031606](https://s2.loli.net/2025/10/09/gxLKYaAo8lm6Pck.png)
 
 clash也需将Allow LAN打开，设置端口7891

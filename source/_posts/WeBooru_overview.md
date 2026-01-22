@@ -11,11 +11,11 @@ description: "再也不用天天上推去收集画师零零散散的图了"
 
 # WeBooru
 
-WeBooru 是一个轻量级、高性能的 **Web 服务端程序**，基于 FastAPI 框架构建。它旨在提供一个稳定、功能丰富的私有客户端，浏览和管理Danbooru等图站的内容。
+WeBooru 是一个轻量级、的B/S架构程序，基于 FastAPI 框架构建。它旨在提供一个稳定、功能丰富的私有客户端，浏览和管理Danbooru等图站的内容。
 
 >目前版本支持Danbooru，Gelbooru，Safebooru，Koanchan，Yande，Rule34
 
-通过在您的服务器上部署 WeBooru，您可以利用 **任何设备**（PC、手机、平板）的浏览器，通过局域网（或内网穿透）随时随地访问您的专属图站浏览使用。
+通过在您的服务器上部署 WeBooru，您可以利用任何设备（PC、手机、平板）的浏览器，通过局域网（或内网穿透）随时随地访问您的专属图站浏览使用。
 
 > 所有帖子数据请求严格遵循图站的**官方API规范**进行获取，完全避非法的爬虫行为，**基本不会对目标网站造成异常负荷**。
 
@@ -30,10 +30,10 @@ WeBooru 是一个轻量级、高性能的 **Web 服务端程序**，基于 FastA
 
 ### 安装与部署
 
-### 下载使用
+#### 下载使用
 
-https://wwaws.lanzn.com/ihOvc3eqv3ad
-密码:bxrv
+https://wwaws.lanzn.com/is0Lj3gsdvob
+密码:1xzh
 点击执行exe即可，运行后访问http://127.0.0.1:8000/即可
 
 > 监听0.0.0.0使用内网穿透或局域网访问服务访问{ip}:8000即可
@@ -45,7 +45,8 @@ https://wwaws.lanzn.com/ihOvc3eqv3ad
 > 20off/webooru:latest
 > ```
 >
-> config.json中保存这您的apikey与书签等等数据，迁移该文件即可备份或迁移记录
+> config.json中保存这您的apikey与书签等数据，迁移该文件即可备份或迁移记录
+> favorite.db是保存了本地收藏的sqlite数据库
 
 #### Docker 部署
 
@@ -69,7 +70,7 @@ docker run -d --name webooru -p 8000:8000 20off/webooru:latest
 
 ### 界面（旧）
 
-**帖子列表 (瀑布流模式)：** 简洁的网格视图，支持按标签搜索和无限滚动。
+**帖子列表 (瀑布流模式)：** 简洁的网格视图，支持按标签搜索（规则见[Help:Cheatsheet Wiki | Danbooru](https://danbooru.donmai.us/wiki_pages/help:cheatsheet)）和无限滚动。
 
 ![](https://s2.loli.net/2025/12/06/S6F3eNXv8yWAVsI.webp)
 

@@ -4,6 +4,7 @@ date: 2025-1-23
 draft: false
 tags: ["ACG","Webooru"]
 categories: ["二次元"]
+description: "再也不用推特,pixiv……来回跑了"
 ---
 
 # booru系列图站

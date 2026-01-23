@@ -58,8 +58,6 @@ docker运行tachidesk容器后浏览器打开http://localhost:4567便会出现ta
 
 语言在此更改
 
-
-
 添加扩展库
 
 ![image-20250821163956487](https://s2.loli.net/2025/10/09/zUGvdDQ5alsuk2S.png)
@@ -80,23 +78,29 @@ https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/main/index.min
 
 再安装自己需要的图源即可（部分网站需要代理， 跳转到第5部分）
 
-
-
 如果只需要在电脑上运行，到此即可使用，以下是局域网内访问与远程访问的内容
-
-
 
 
 
 ### 3.电脑开放防火墙4567端口
 
+#### windows：
+
 ![image-20250821140436228](https://s2.loli.net/2025/10/09/Am42N1Vok7HJdDv.png)![image-20250821140438926](https://s2.loli.net/2025/10/09/b7X6WIQocY9Pai3.png)![image-20250821140442555](https://s2.loli.net/2025/10/09/PlI5zeOu26h1CZL.png)![image-20250821140444441](https://s2.loli.net/2025/10/09/C15id69AOgTvIG2.png)![image-20250821140445893](https://s2.loli.net/2025/10/09/TLU78mVXxPpFMN1.png)
+
+#### linux：
+
+```
+sudo ufw allow 4567/tcp
+```
+
+***
+
+在powershell运行命令查询本机IP地址如192.168.1.100
 
 ```powershell
 ipconfig | Select-String "IPv4"
 ```
-
-在powershell运行命令查询本机IP地址如192.168.1.100
 
 或访问该网站<a href="https://ip.900cha.com/" target="_blank" style="color: blue;">IP地址查询</a>
 
@@ -106,9 +110,7 @@ ipconfig | Select-String "IPv4"
 
 > 由于大部分情况下我们没有固定的ip，所以即使只需求局域网使用仍然推荐使用Tailscale等虚拟组网软件，如<a href="https://www.radmin-lan.cn/" target="_blank" style="color: blue;">Radmin LAN</a>等
 
-> 校园网可能也需要使用Tailscale，因为有些校园网会阻止设备局域网联机
-
-
+> 校园网可能也需要使用Tailscale，因为有些校园网会阻止设备互连
 
 
 
@@ -134,7 +136,7 @@ tailscale ip
 
 > tailscale传文件也是把好手
 
-***
+
 
 ### 5.使用<a href="https://www.wangwangit.com/Windows上的代理客户端Clash/index.html" target="_blank" style="color: blue;">Clash</a>代理转发tachidesk浏览
 
@@ -152,7 +154,7 @@ host.docker.internal 是docker容器访问宿主机的ip，7891是clash用与soc
 
 ![image-20250821194031606](https://s2.loli.net/2025/10/09/gxLKYaAo8lm6Pck.png)
 
-clash也需将Allow LAN打开，设置端口7891
+clash需将**Allow LAN**打开，设置端口7891
 
 以下是流量转发的路径
 
@@ -160,7 +162,7 @@ clash也需将Allow LAN打开，设置端口7891
 
 > 推荐使用<a href="https://clash-party.com/" target="_blank" style="color: blue;">Clash Party</a>，对小白更友好
 
-> 漫蛙
+
 
 ### 6.使用<a href="https://github.com/FlareSolverr/FlareSolverr" target="_blank" style="color: blue;">FlareSolverr</a>绕过<a href="https://blog.csdn.net/qq_21050249/article/details/131571780" target="_blank" style="color: blue;">cloudflare</a>
 
@@ -173,10 +175,9 @@ docker run -d `
   ghcr.io/flaresolverr/flaresolverr:latest
 ```
 
-powershell或cmd运行以上代码拉取flaresolverr库并运行容器
+powershell或cmd运行以上代码拉取flaresolverr镜像并运行容器
 
 ![image-20250907044116773](https://s2.loli.net/2025/10/09/v1iqgJbAEt4jkcB.png)
 
 FlareSolverr服务器地址填入http://X.X.X.X:8191（X处填入tailscale分配的ip地址）
 
-![image-20250907044410980](https://s2.loli.net/2025/10/09/kHzJdrf5SGPxjDg.png)

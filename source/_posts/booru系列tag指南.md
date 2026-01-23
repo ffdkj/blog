@@ -1,5 +1,5 @@
 ---
-title: "booru系列图站介绍及使用"
+title: "booru系列图站tag指南"
 date: 2025-1-23
 draft: false
 tags: ["ACG","Webooru","教程"]

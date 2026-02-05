@@ -1,6 +1,6 @@
 ---
 title: "booru系列图站tag指南"
-date: 2025-1-23
+date: 2026-1-23
 draft: false
 tags: ["ACG","Webooru","教程"]
 categories: ["二次元"]

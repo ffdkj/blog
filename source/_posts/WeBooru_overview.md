@@ -7,8 +7,6 @@ categories: ["技术"]
 description: "再也不用天天上推去收集画师零零散散的图了"
 ---
 
-
-
 # WeBooru
 
 WeBooru 是一个轻量级、的B/S架构程序，基于 FastAPI 框架构建。它旨在提供一个稳定、功能丰富的私有客户端，浏览和管理Danbooru等图站的内容。

@@ -1,11 +1,11 @@
-```
+---
 title: "Suwayomi/Tachidesk桌面端教程"
 date: 2026-2-5
 draft: false
 tags: ["教程", "漫画", "ACG"]
 categories: ["二次元"]
 description: "不想折腾docker的这边请"
-```
+---
 
 # Suwayomi/Tachidesk桌面端教程
 

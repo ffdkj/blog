@@ -23,7 +23,7 @@ cover: https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png
 
 
 
-### 1. 安装 <a href="https://www.cnblogs.com/phpnan/p/19092854" target="_blank" style="color: blue;">Docker</a>并部署 <a href="https://newzone.top/services/dockers-on-nas/tachidesk.html#配置指南" target="_blank" style="color: blue;">Tachidesk</a>
+### 安装 <a href="https://www.cnblogs.com/phpnan/p/19092854" target="_blank" style="color: blue;">Docker</a>并部署 <a href="https://newzone.top/services/dockers-on-nas/tachidesk.html#配置指南" target="_blank" style="color: blue;">Tachidesk</a>
 
 <a href="https://www.docker.com/products/docker-desktop/" target="_blank" style="color: blue;">下载Docker</a>
 
@@ -50,7 +50,7 @@ docker run -d `
 
 ***
 
-### 2.配置Tachidesk 
+### 配置Tachidesk 
 
 docker运行tachidesk容器后浏览器打开http://localhost:4567便会出现tachidesk的界面
 
@@ -82,7 +82,7 @@ https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/main/index.min
 
 ***
 
-### 3.局域网内使用
+### 局域网内使用
 
 #### 电脑开放防火墙4567端口
 
@@ -124,7 +124,7 @@ ipconfig
 
 ***
 
-### 4.远程使用
+### 远程使用
 
 #### <a href="https://tailscale.com/download" target=_blank>安装使用tailscale</a>
 
@@ -150,7 +150,7 @@ tailscale ip
 
 ***
 
-### 5.使用<a href="https://www.wangwangit.com/Windows上的代理客户端Clash/index.html" target="_blank" style="color: blue;">Clash</a>代理
+### 使用<a href="https://www.wangwangit.com/Windows上的代理客户端Clash/index.html" target="_blank" style="color: blue;">Clash</a>代理
 
 **（我无法提供任何节点，也不教怎么科学上网，只是教有条件的人配置代理）**
 
@@ -172,7 +172,7 @@ clash需将**Allow LAN**打开
 
 ***
 
-### 6.使用<a href="https://github.com/FlareSolverr/FlareSolverr" target="_blank" style="color: blue;">FlareSolverr</a>绕过<a href="https://blog.csdn.net/qq_21050249/article/details/131571780" target="_blank" style="color: blue;">cloudflare</a> 
+### 使用<a href="https://github.com/FlareSolverr/FlareSolverr" target="_blank" style="color: blue;">FlareSolverr</a>绕过<a href="https://blog.csdn.net/qq_21050249/article/details/131571780" target="_blank" style="color: blue;">cloudflare</a> 
 
 ```powershell
 docker run -d `

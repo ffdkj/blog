@@ -35,17 +35,7 @@ https://wwaws.lanzn.com/ilrA83i855ej
 密码:9z5r
 点击执行exe即可，运行后自动访问http://localhost:8000/
 
-> 监听0.0.0.0使用内网穿透或局域网访问服务访问{ip}:8000即可
->
-> ```
-> docker run -d --name webooru \
-> -p 8000:8000 \
-> -v {你的设置路径}config.json:/app/Webooru/config.json \
-> 20off/webooru:latest
-> ```
->
-> config.json中保存这您的apikey与书签等数据，迁移该文件即可备份或迁移记录
-> favorite.db是保存了本地收藏的sqlite数据库
+
 
 #### Docker 部署（Linux arm64/amd64）
 
@@ -59,7 +49,7 @@ docker run -d --name webooru -p 8000:8000 20off/webooru:latest
 
 如果只需求电脑访问，那便到此为止即可
 
-如果需要局域网访问，或内网穿透远程使用请参考[猴子也能会的tachidesk部署指南 | Hexo](https://blog-ffzz.vercel.app/2025/10/11/猴子也能懂的部署tachidesk指南/)的2，3章内容
+如果需要局域网访问，或内网穿透远程访问请参考[猴子也能会的tachidesk部署指南 | Hexo](https://blog-ffzz.vercel.app/2025/10/11/猴子也能懂的部署tachidesk指南/)的2，3章内容
 
 ***
 

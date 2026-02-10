@@ -23,16 +23,17 @@ WeBooru 是一个轻量级、的B/S架构程序，基于 FastAPI 框架构建。
 - **智能书签**：书签将记录您的阅读进度，随时从上次中断的地方继续浏览。
 - **远程代理**：服务器配置代理，解决客户端的代理问题。
 - **纯净体验**：无广告、无干扰的沉浸式插画阅览器。
+- **便利迁移**:   单sqlite文件存储所有图站收藏，浏览/迁移方便。
 
 ------
 
 ### 安装与部署
 
-#### 下载使用
+#### 下载使用（Windows）
 
-https://wwaws.lanzn.com/is0Lj3gsdvob
-密码:1xzh
-点击执行exe即可，运行后访问http://127.0.0.1:8000/即可
+https://wwaws.lanzn.com/ilrA83i855ej
+密码:9z5r
+点击执行exe即可，运行后自动访问http://localhost:8000/
 
 > 监听0.0.0.0使用内网穿透或局域网访问服务访问{ip}:8000即可
 >
@@ -46,7 +47,7 @@ https://wwaws.lanzn.com/is0Lj3gsdvob
 > config.json中保存这您的apikey与书签等数据，迁移该文件即可备份或迁移记录
 > favorite.db是保存了本地收藏的sqlite数据库
 
-#### Docker 部署
+#### Docker 部署（Linux arm64/amd64）
 
 Bash/cmd
 
@@ -63,14 +64,22 @@ docker run -d --name webooru -p 8000:8000 20off/webooru:latest
 ***
 
 > 如果不知道docker啊，tailscale，端口代理是什么东西，也请移步隔壁[猴子也能会的tachidesk部署指南 | Hexo](https://blog-ffzz.vercel.app/2025/10/11/猴子也能懂的部署tachidesk指南/)
+>
+> 容器数据迁移参考
+>
+> ```
+>     volumes:
+>       - /root/back_up/my_backup/config.json:/app/Webooru/config.json
+>       - /root/back_up/my_backup/favorites.db:/app/Webooru/favorites.db
+> ```
 
 ***
 
-### 界面（旧）
+### 界面
 
 **帖子列表 (瀑布流模式)：** 简洁的网格视图，支持按标签搜索（规则见[Help:Cheatsheet Wiki | Danbooru](https://danbooru.donmai.us/wiki_pages/help:cheatsheet)）和无限滚动。
 
-![](https://s2.loli.net/2025/12/06/S6F3eNXv8yWAVsI.webp)
+![](https://s2.loli.net/2026/01/24/GhlFe4AaVEn3sWH.png)
 
 **设置与历史记录面板：** 管理代理设置和站点源配置等。
 

@@ -2,8 +2,8 @@
 title: "猴子也能会的tachidesk部署指南"
 date: 2025-10-11
 draft: false
-tags: ["教程", "Hugo","Tailscale"]
-categories: ["技术"]
+tags: ["教程", "Hugo","Tailscale", "漫画"]
+categories: ["技术", "ACG"]
 index_img: https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png
 description: "mihon/tachiyomi怎么没有ios版啊…………  <br>
 老是被cloudflare墙掉很难受啊…………  <br>
@@ -23,13 +23,13 @@ cover: https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png
 
 
 
-### 安装 <a href="https://www.cnblogs.com/phpnan/p/19092854" target="_blank" style="color: blue;">Docker</a>并部署 <a href="https://newzone.top/services/dockers-on-nas/tachidesk.html#配置指南" target="_blank" style="color: blue;">Tachidesk</a>
+### 安装 <a href="https://www.cnblogs.com/phpnan/p/19092854" target="_blank" >Docker</a>并部署 <a href="https://newzone.top/services/dockers-on-nas/tachidesk.html#配置指南" target="_blank">Tachidesk</a>
 
-<a href="https://www.docker.com/products/docker-desktop/" target="_blank" style="color: blue;">下载Docker</a>
+<a href="https://www.docker.com/products/docker-desktop/" target="_blank">下载Docker</a>
 
-> *<a href="https://www.cnblogs.com/geekbruce/articles/18554682" target="_blank" style="color: blue;">不知道下 ARM 还是 AMD版本点这里</a>*
+> *<a href="https://www.cnblogs.com/geekbruce/articles/18554682" target="_blank">不知道下 ARM 还是 AMD版本点这里</a>*
 >
-> *详细教程及报错解决参考<a href="https://www.cnblogs.com/yxysuanfa/p/19124346" target="_blank" style="color: blue;">Docker部署配置全流程（超详细——Windows和Linux） - 指南 - yxysuanfa - 博客园</a>*
+> *详细教程及报错解决参考<a href="https://www.cnblogs.com/yxysuanfa/p/19124346" target="_blank" >Docker部署配置全流程（超详细——Windows和Linux） - 指南 - yxysuanfa - 博客园</a>*
 
 打开Terminal终端![	](https://s2.loli.net/2025/10/09/jPeIuJf29FwSGQz.png)
 
@@ -44,7 +44,7 @@ docker run -d `
 
 复制粘贴运行
 
-（如果下载卡顿，可以用<a href="https://steampp.net/" target="_blank" style="color: blue;">Steam++</a>加速dockerhub，或<a href="https://zhuanlan.zhihu.com/p/1953242201254495256" target="_blank" style="color: blue;">配置国内镜像源</a>）
+（如果下载卡顿，可以用<a href="https://steampp.net/" target="_blank" >Steam++</a>加速dockerhub，或<a href="https://zhuanlan.zhihu.com/p/1953242201254495256" target="_blank" >配置国内镜像源</a>）
 
 ![](https://s2.loli.net/2025/10/09/q1ZwGDOdFajWuix.png)
 
@@ -118,7 +118,7 @@ ipconfig
 
 如果需要远程访问，可以使用tailscale组网
 
-> 因为局域网ip容易变动，即使只需求局域网使用仍然推荐使用Tailscale等虚拟组网软件，如<a href="https://www.radmin-lan.cn/" target="_blank" style="color: blue;">Radmin LAN</a>等
+> 因为局域网ip容易变动，即使只需求局域网使用仍然推荐使用Tailscale等虚拟组网软件，如<a href="https://www.radmin-lan.cn/" target="_blank" >Radmin LAN</a>等
 
 > 校园网可能也需要使用Tailscale，因为有的校园网会阻止设备互连
 
@@ -150,7 +150,7 @@ tailscale ip
 
 ***
 
-### 使用<a href="https://www.wangwangit.com/Windows上的代理客户端Clash/index.html" target="_blank" style="color: blue;">Clash</a>代理
+### 使用<a href="https://www.wangwangit.com/Windows上的代理客户端Clash/index.html" target="_blank" >Clash</a>代理
 
 **（我无法提供任何节点，也不教怎么科学上网，只是教有条件的人配置代理）**
 
@@ -168,11 +168,11 @@ host.docker.internal 是docker容器访问宿主机的ip，端口数自行查看
 
 clash需将**Allow LAN**打开
 
-> 推荐使用<a href="https://clash-party.com/" target="_blank" style="color: blue;">Clash Party</a>，对小白更友好
+> 推荐使用<a href="https://clash-party.com/" target="_blank" >Clash Party</a>，对小白更友好
 
 ***
 
-### 使用<a href="https://github.com/FlareSolverr/FlareSolverr" target="_blank" style="color: blue;">FlareSolverr</a>绕过<a href="https://blog.csdn.net/qq_21050249/article/details/131571780" target="_blank" style="color: blue;">cloudflare</a> 
+### 使用<a href="https://github.com/FlareSolverr/FlareSolverr" target="_blank" >FlareSolverr</a>绕过<a href="https://blog.csdn.net/qq_21050249/article/details/131571780" target="_blank" >cloudflare</a> 
 
 ```powershell
 docker run -d `

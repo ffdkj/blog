@@ -9,6 +9,16 @@ description: "不想折腾docker的这边请"
 
 # Suwayomi/Tachidesk桌面端教程
 
+下载安装包
+
+> windows网盘链接：https://pan.quark.cn/s/d4767c53290b
+>
+> mac网盘链接：https://pan.quark.cn/s/f9e20c0e6762
+>
+> [Releases · Suwayomi/Suwayomi-Server（源安装包链接，需科学上网包括mac,linux,windows等）](https://github.com/Suwayomi/Suwayomi-Server/releases)
+
+下面以windows系统为例
+
 将下载的Suwayomi-Server-v2.1.2060-windows-x64. msi双击运行，等待一会桌面就会有Suwayomi_Launcher的图标，点击将弹出启动配置页面
 
 ![image-20260129214238724](https://s2.loli.net/2026/02/05/PmCM4EJt5jXhd3c.png)
@@ -28,6 +38,7 @@ https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json
 
 ![image-20260129214655758](https://s2.loli.net/2026/02/05/goa6FurKschkdMt.png)
 
-点击Launch（启动）后软件将在后台运行并跳转到网页上，剩下的操作与[猴子也能会的tachidesk部署指南 | 20off](https://nablog.zeabur.app/2025/10/11/猴子也能懂的部署tachidesk指南/)第二节及以后一致
+点击Launch（启动）后软件将在后台运行并跳转到网页上，
+剩下的操作与[猴子也能会的tachidesk部署指南 | 20off](https://nablog.zeabur.app/2025/10/11/猴子也能懂的部署tachidesk指南/)第二节及以后一致
 
 ![image-20260205130229188](https://s2.loli.net/2026/02/05/oq1BcN7UXPEGd8n.png)

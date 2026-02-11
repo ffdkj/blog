@@ -27,9 +27,9 @@ cover: https://s2.loli.net/2025/10/12/kqKaL5tDIHwWnzZ.png
 
 <a href="https://www.docker.com/products/docker-desktop/" target="_blank">下载Docker</a>
 
-> *<a href="https://www.cnblogs.com/geekbruce/articles/18554682" target="_blank">不知道下 ARM 还是 AMD版本点这里</a>*
+> *<a href="https://pan.quark.cn/s/30769e2ed692" target="_blank">网盘直链</a>*
 >
-> *详细教程及报错解决参考<a href="https://www.cnblogs.com/yxysuanfa/p/19124346" target="_blank" >Docker部署配置全流程（超详细——Windows和Linux） - 指南 - yxysuanfa - 博客园</a>*
+> *详细安装教程及报错解决参考<a href="https://www.cnblogs.com/yxysuanfa/p/19124346" target="_blank" >Docker部署配置全流程（超详细——Windows和Linux） - 指南 - yxysuanfa - 博客园</a>*
 
 打开Terminal终端![	](https://s2.loli.net/2025/10/09/jPeIuJf29FwSGQz.png)
 

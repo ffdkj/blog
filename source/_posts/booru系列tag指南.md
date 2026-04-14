@@ -77,3 +77,7 @@ description: " "
 > - 每次搜索最多只能使用 **2个** 标签。搜索时间超过3秒会超时
 > - 可使用age:<1month，limit:5（公网版本写死了limit为100无法更改），order:score等限制标签防止超时
 > - 免费元标签（如 `rating:`, `status:`, `id:`, `score:` 等）不计入这 2 个标签的限制，可以自由叠加。
+
+## 七、收藏库特别tag
+
+本地收藏库支持ratio>=1:1与order:random(返回筛选插画随机排序),order:score等字段与”-“作为非操作符排除tag

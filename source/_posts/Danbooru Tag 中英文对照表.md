@@ -9,11 +9,13 @@ description: "点击输入文本"
 
 # Danbooru Tag 中英文对照表 
 
-![Tag Count](https://count.getloli.com/@nayun?name=nayun&theme=booru-lewd&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=auto&num=155000) 
+![Tag Count](https://count.getloli.com/@nayun?name=nayun&theme=booru-lewd&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=auto&num=305000) 
 
 ## ***每日更新 !***
 
-收录所有post_count>=10的tag,使用人工智能gemini-3-flash-preview翻译+能工智人校对,如使用过程中遇到翻译错误可以提issue或骚扰2624696826a@gmail.com
+收录所有post_count>=10的tag,使用人工智能gemini-3-flash-preview翻译+能工智人校对,如使用过程中遇到翻译错误可以访问touhou.zeabur.app提交纠错
+
+
 
 ## 数据库结构：
 
